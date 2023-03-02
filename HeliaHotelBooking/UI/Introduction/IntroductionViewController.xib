@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroductionViewController" customModule="HeliaHotelBooking" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonNextScreen" destination="4Eh-k5-tvD" id="a3c-e7-5rW"/>
+                <outlet property="collectionView" destination="59c-Xt-8Pf" id="hAa-P6-M3y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOT-AR-2qn">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="59c-Xt-8Pf">
+                            <rect key="frame" x="0.0" y="-65" width="393" height="636"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5Qj-Q1-yMO">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="gOV-nM-nbh"/>
+                                <outlet property="delegate" destination="-1" id="6Rs-b7-xgz"/>
+                            </connections>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eh-k5-tvD">
+                            <rect key="frame" x="39" y="613" width="315" height="50.333333333333371"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Next" buttonSize="large">
+                                <color key="baseBackgroundColor" red="0.10980392156862745" green="0.75294117647058822" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="nextScreen:" destination="-1" eventType="touchUpInside" id="je6-HC-YmV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F52-Ub-glr">
+                            <rect key="frame" x="39" y="671.33333333333337" width="315" height="50.333333333333371"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" buttonSize="large">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Skip"/>
+                                </attributedString>
+                                <color key="baseForegroundColor" red="0.10980392156862745" green="0.71372549019607845" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="baseBackgroundColor" red="0.90980392156862744" green="0.97254901960784312" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="skipIntro:" destination="-1" eventType="touchUpInside" id="l1g-tK-A54"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="4Eh-k5-tvD" firstAttribute="leading" secondItem="nOT-AR-2qn" secondAttribute="leading" constant="39" id="2Ed-TI-Xgn"/>
+                        <constraint firstItem="4Eh-k5-tvD" firstAttribute="centerX" secondItem="59c-Xt-8Pf" secondAttribute="centerX" id="5aD-TW-Wee"/>
+                        <constraint firstAttribute="bottom" secondItem="4Eh-k5-tvD" secondAttribute="bottom" constant="95.666666666666629" id="9Wd-0w-syS"/>
+                        <constraint firstAttribute="trailing" secondItem="F52-Ub-glr" secondAttribute="trailing" constant="39" id="9im-ne-FYA"/>
+                        <constraint firstItem="F52-Ub-glr" firstAttribute="leading" secondItem="nOT-AR-2qn" secondAttribute="leading" constant="39" id="NPT-6w-wXp"/>
+                        <constraint firstItem="59c-Xt-8Pf" firstAttribute="top" secondItem="nOT-AR-2qn" secondAttribute="top" constant="-65" id="XEI-Wc-IWw"/>
+                        <constraint firstItem="F52-Ub-glr" firstAttribute="top" secondItem="4Eh-k5-tvD" secondAttribute="bottom" constant="8" id="kwD-h1-sZ7"/>
+                        <constraint firstAttribute="trailing" secondItem="59c-Xt-8Pf" secondAttribute="trailing" id="l9M-dk-qUB"/>
+                        <constraint firstItem="4Eh-k5-tvD" firstAttribute="top" secondItem="59c-Xt-8Pf" secondAttribute="bottom" constant="42.333333333333371" id="t51-vi-8E3"/>
+                        <constraint firstItem="59c-Xt-8Pf" firstAttribute="leading" secondItem="nOT-AR-2qn" secondAttribute="leading" id="xnv-39-QTn"/>
+                        <constraint firstAttribute="trailing" secondItem="4Eh-k5-tvD" secondAttribute="trailing" constant="39" id="zZ2-w1-fB8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nOT-AR-2qn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DfP-PI-aUR"/>
+                <constraint firstItem="nOT-AR-2qn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Idl-H4-dvz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nOT-AR-2qn" secondAttribute="trailing" id="Zqq-W0-SH4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nOT-AR-2qn" secondAttribute="bottom" id="wA2-0b-uLV"/>
+            </constraints>
+            <point key="canvasLocation" x="-306.1068702290076" y="55.633802816901408"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
